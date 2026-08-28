@@ -296,19 +296,17 @@ function showStartMessage(message) {
 }
 
 function startQuiz() {
-  const selectedGrade = Number(document.getElementById("grade-select").value);
-  if (!selectedGrade) {
+  if (!state.selectedGrade) {
     showStartMessage("がくねんを えらんでから はじめよう！");
     return;
   }
 
-  const filteredQuestions = getQuestionsByGrade(selectedGrade);
+  const filteredQuestions = getQuestionsByGrade(state.selectedGrade);
   if (filteredQuestions.length === 0) {
     showStartMessage("このがくねんの もんだいは じゅんびちゅうだよ。");
     return;
   }
 
-  state.selectedGrade = selectedGrade;
   state.questions = shuffle(filteredQuestions).slice(0, 10);
   state.current = 0;
   state.score = 0;
@@ -430,4 +428,18 @@ function showResult() {
 
 document.getElementById("btn-start").addEventListener("click", startQuiz);
 document.getElementById("btn-next").addEventListener("click", nextQuestion);
-document.getElementById("btn-retry").addEventListener("click", startQuiz);
+document.getElementById("btn-retry").addEventListener("click", () => {
+  state.selectedGrade = null;
+  document.querySelectorAll(".grade-btn").forEach((b) => b.classList.remove("selected"));
+  showStartMessage("");
+  showScreen("screen-start");
+});
+
+document.querySelectorAll(".grade-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    state.selectedGrade = Number(btn.dataset.grade);
+    document.querySelectorAll(".grade-btn").forEach((b) => b.classList.remove("selected"));
+    btn.classList.add("selected");
+    showStartMessage("");
+  });
+});

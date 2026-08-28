@@ -1,0 +1,188 @@
+/* ===== 全体 ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Hiragino Maru Gothic Pro", "Rounded Mplus 1c", "BIZ UDGothic", sans-serif;
+  background: #fff8e7;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app {
+  width: 100%;
+  max-width: 480px;
+  padding: 24px 16px;
+}
+
+/* ===== 画面の表示・非表示 ===== */
+.screen {
+  text-align: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ===== スタート画面 ===== */
+h1 {
+  font-size: 2.4rem;
+  color: #e67e22;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #888;
+  margin-bottom: 32px;
+}
+
+/* ===== 進捗バー ===== */
+#progress-bar-wrap {
+  background: #f0e0c0;
+  border-radius: 8px;
+  height: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+#progress-bar {
+  height: 100%;
+  background: #f39c12;
+  border-radius: 8px;
+  transition: width 0.4s ease;
+  width: 0%;
+}
+
+/* ===== 問題カウント・得点 ===== */
+#question-count {
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 4px;
+}
+
+#score-display {
+  font-size: 1.1rem;
+  color: #27ae60;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+/* ===== 問題ボックス ===== */
+#question-box {
+  background: #fff;
+  border: 3px solid #f39c12;
+  border-radius: 16px;
+  padding: 24px 16px;
+  margin-bottom: 20px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#question-text {
+  font-size: 1.5rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== 選択肢 ===== */
+#choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.choice-btn {
+  background: #fff;
+  border: 3px solid #a8d8ea;
+  border-radius: 14px;
+  padding: 16px 8px;
+  font-size: 1.3rem;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, transform 0.1s;
+}
+
+.choice-btn:hover:not(:disabled) {
+  background: #e8f7ff;
+  border-color: #4da6d0;
+  transform: scale(1.03);
+}
+
+.choice-btn:disabled {
+  cursor: default;
+}
+
+.choice-btn.correct {
+  background: #d4edda;
+  border-color: #27ae60;
+  color: #155724;
+}
+
+.choice-btn.incorrect {
+  background: #f8d7da;
+  border-color: #e74c3c;
+  color: #721c24;
+}
+
+/* ===== フィードバック ===== */
+#feedback {
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+#feedback.correct {
+  background: #d4edda;
+  color: #155724;
+}
+
+#feedback.incorrect {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* ===== ボタン共通 ===== */
+.btn-primary {
+  background: #f39c12;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 14px 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.btn-primary:hover {
+  background: #d68910;
+  transform: scale(1.05);
+}
+
+/* ===== 結果画面 ===== */
+h2 {
+  font-size: 2rem;
+  color: #e67e22;
+  margin-bottom: 16px;
+}
+
+#result-message {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+#result-score {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 28px;
+}

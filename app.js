@@ -13,6 +13,7 @@
 // 増やす場合はこの配列に追加するだけでOK
 // ─────────────────────────────────────────────
 const QUESTIONS = [
+  // ── 1年生 ──
   {
     question: "「山」は何と読む？",
     choices: ["かわ", "やま", "そら", "もり"],
@@ -32,34 +33,381 @@ const QUESTIONS = [
     grades: [1, 2],
   },
   {
+    question: "「日」は何と読む？",
+    choices: ["つき", "ほし", "ひ", "そら"],
+    answer: "ひ",
+    grades: [1, 2],
+  },
+  {
+    question: "「水」は何と読む？",
+    choices: ["みず", "かぜ", "ひ", "つち"],
+    answer: "みず",
+    grades: [1, 2],
+  },
+  {
+    question: "「月」は何と読む？",
+    choices: ["ひ", "つき", "ほし", "くも"],
+    answer: "つき",
+    grades: [1, 2],
+  },
+  {
+    question: "「花」は何と読む？",
+    choices: ["はな", "くさ", "き", "みず"],
+    answer: "はな",
+    grades: [1, 2],
+  },
+  {
+    question: "「犬」は何と読む？",
+    choices: ["ねこ", "とり", "いぬ", "うお"],
+    answer: "いぬ",
+    grades: [1, 2],
+  },
+  {
+    question: "「目」は何と読む？",
+    choices: ["みみ", "め", "はな", "くち"],
+    answer: "め",
+    grades: [1, 2],
+  },
+  {
+    question: "「手」は何と読む？",
+    choices: ["あし", "て", "かお", "かた"],
+    answer: "て",
+    grades: [1, 2],
+  },
+  {
+    question: "「土」は何と読む？",
+    choices: ["みず", "ひ", "つち", "いし"],
+    answer: "つち",
+    grades: [1, 2],
+  },
+  {
+    question: "「空」は何と読む？",
+    choices: ["やま", "かわ", "そら", "うみ"],
+    answer: "そら",
+    grades: [1, 2],
+  },
+  // ── 2年生 ──
+  {
+    question: "「先生」の「先」の読みは？",
+    choices: ["あと", "よこ", "さき", "した"],
+    answer: "さき",
+    grades: [2, 3],
+  },
+  {
+    question: "「友達」の「友」の読みは？",
+    choices: ["とも", "はは", "ちち", "こ"],
+    answer: "とも",
+    grades: [2, 3],
+  },
+  {
     question: "「学校」の「校」の読みは？",
     choices: ["こう", "きょう", "だい", "しゅう"],
     answer: "こう",
     grades: [2, 3, 4, 5, 6],
   },
   {
-    question: "「先生」の「先」の読みは？",
-    choices: ["あと", "よこ", "さき", "した"],
-    answer: "さき",
-    grades: [1, 2, 3],
+    question: "「毎日」の「毎」の読みは？",
+    choices: ["まい", "にち", "ひ", "つき"],
+    answer: "まい",
+    grades: [2, 3],
   },
+  {
+    question: "「北」は何と読む？",
+    choices: ["きた", "みなみ", "ひがし", "にし"],
+    answer: "きた",
+    grades: [2, 3],
+  },
+  {
+    question: "「南」は何と読む？",
+    choices: ["きた", "みなみ", "ひがし", "にし"],
+    answer: "みなみ",
+    grades: [2, 3],
+  },
+  {
+    question: "「東」は何と読む？",
+    choices: ["きた", "みなみ", "ひがし", "にし"],
+    answer: "ひがし",
+    grades: [2, 3],
+  },
+  {
+    question: "「西」は何と読む？",
+    choices: ["きた", "みなみ", "ひがし", "にし"],
+    answer: "にし",
+    grades: [2, 3],
+  },
+  {
+    question: "「牛」は何と読む？",
+    choices: ["うま", "うし", "ひつじ", "ぶた"],
+    answer: "うし",
+    grades: [2, 3],
+  },
+  {
+    question: "「馬」は何と読む？",
+    choices: ["うし", "とり", "うま", "さる"],
+    answer: "うま",
+    grades: [2, 3],
+  },
+  {
+    question: "「海」は何と読む？",
+    choices: ["かわ", "うみ", "やま", "そら"],
+    answer: "うみ",
+    grades: [2, 3],
+  },
+  {
+    question: "「雨」は何と読む？",
+    choices: ["ゆき", "かぜ", "あめ", "くも"],
+    answer: "あめ",
+    grades: [2, 3],
+  },
+  // ── 3年生 ──
   {
     question: "「日曜日」の「曜」の読みは？",
     choices: ["にち", "よう", "び", "まい"],
     answer: "よう",
-    grades: [2, 3, 4, 5, 6],
+    grades: [3, 4, 5, 6],
   },
   {
     question: "「電気」の「電」の読みは？",
     choices: ["でん", "き", "かぜ", "ひかり"],
     answer: "でん",
-    grades: [2, 3, 4, 5, 6],
+    grades: [3, 4, 5, 6],
   },
   {
-    question: "「友達」の「友」の読みは？",
-    choices: ["とも", "はは", "ちち", "こ"],
-    answer: "とも",
-    grades: [1, 2, 3],
+    question: "「図書館」の「館」の読みは？",
+    choices: ["かん", "しょ", "ず", "へや"],
+    answer: "かん",
+    grades: [3, 4, 5, 6],
+  },
+  {
+    question: "「運動」の「運」の読みは？",
+    choices: ["うん", "どう", "はし", "あそ"],
+    answer: "うん",
+    grades: [3, 4, 5, 6],
+  },
+  {
+    question: "「練習」の「練」の読みは？",
+    choices: ["れん", "しゅう", "なら", "まな"],
+    answer: "れん",
+    grades: [3, 4, 5, 6],
+  },
+  {
+    question: "「昨日」は何と読む？",
+    choices: ["きのう", "きょう", "あした", "あさって"],
+    answer: "きのう",
+    grades: [3, 4, 5, 6],
+  },
+  {
+    question: "「朝食」の「朝」の読みは？",
+    choices: ["あさ", "ひる", "ゆう", "よる"],
+    answer: "あさ",
+    grades: [3, 4, 5, 6],
+  },
+  {
+    question: "「発表」の「発」の読みは？",
+    choices: ["はつ", "おこ", "だ", "はな"],
+    answer: "はつ",
+    grades: [3, 4, 5, 6],
+  },
+  {
+    question: "「計算」の「計」の読みは？",
+    choices: ["けい", "さん", "よむ", "かぞ"],
+    answer: "けい",
+    grades: [3, 4, 5, 6],
+  },
+  {
+    question: "「植物」の「植」の読みは？",
+    choices: ["しょく", "ぶつ", "うえ", "はな"],
+    answer: "しょく",
+    grades: [3, 4, 5, 6],
+  },
+  {
+    question: "「地球」の「球」の読みは？",
+    choices: ["きゅう", "ち", "ほし", "まる"],
+    answer: "きゅう",
+    grades: [3, 4, 5, 6],
+  },
+  // ── 4年生 ──
+  {
+    question: "「都道府県」の「府」の読みは？",
+    choices: ["ふ", "けん", "と", "どう"],
+    answer: "ふ",
+    grades: [4, 5, 6],
+  },
+  {
+    question: "「関係」の「関」の読みは？",
+    choices: ["かん", "けい", "つな", "むす"],
+    answer: "かん",
+    grades: [4, 5, 6],
+  },
+  {
+    question: "「観察」の「観」の読みは？",
+    choices: ["かん", "さつ", "みる", "しら"],
+    answer: "かん",
+    grades: [4, 5, 6],
+  },
+  {
+    question: "「結果」の「結」の読みは？",
+    choices: ["けつ", "か", "むす", "おわ"],
+    answer: "けつ",
+    grades: [4, 5, 6],
+  },
+  {
+    question: "「協力」の「協」の読みは？",
+    choices: ["きょう", "りょく", "てつ", "たす"],
+    answer: "きょう",
+    grades: [4, 5, 6],
+  },
+  {
+    question: "「議会」の「議」の読みは？",
+    choices: ["ぎ", "かい", "はなし", "あつ"],
+    answer: "ぎ",
+    grades: [4, 5, 6],
+  },
+  {
+    question: "「産業」の「産」の読みは？",
+    choices: ["さん", "ぎょう", "つく", "うむ"],
+    answer: "さん",
+    grades: [4, 5, 6],
+  },
+  {
+    question: "「季節」の「季」の読みは？",
+    choices: ["き", "せつ", "とき", "はる"],
+    answer: "き",
+    grades: [4, 5, 6],
+  },
+  {
+    question: "「積極」の「積」の読みは？",
+    choices: ["せき", "きょく", "つ", "あつ"],
+    answer: "せき",
+    grades: [4, 5, 6],
+  },
+  {
+    question: "「博物館」の「博」の読みは？",
+    choices: ["はく", "ぶつ", "かん", "ひろ"],
+    answer: "はく",
+    grades: [4, 5, 6],
+  },
+  // ── 5年生 ──
+  {
+    question: "「経済」の「経」の読みは？",
+    choices: ["けい", "ざい", "はか", "かね"],
+    answer: "けい",
+    grades: [5, 6],
+  },
+  {
+    question: "「環境」の「環」の読みは？",
+    choices: ["かん", "きょう", "まわ", "ちか"],
+    answer: "かん",
+    grades: [5, 6],
+  },
+  {
+    question: "「貿易」の「貿」の読みは？",
+    choices: ["ぼう", "えき", "かわ", "うる"],
+    answer: "ぼう",
+    grades: [5, 6],
+  },
+  {
+    question: "「確認」の「確」の読みは？",
+    choices: ["かく", "にん", "たしか", "しら"],
+    answer: "かく",
+    grades: [5, 6],
+  },
+  {
+    question: "「賛成」の「賛」の読みは？",
+    choices: ["さん", "せい", "たす", "どう"],
+    answer: "さん",
+    grades: [5, 6],
+  },
+  {
+    question: "「解決」の「解」の読みは？",
+    choices: ["かい", "けつ", "とく", "わか"],
+    answer: "かい",
+    grades: [5, 6],
+  },
+  {
+    question: "「複雑」の「複」の読みは？",
+    choices: ["ふく", "ざつ", "おも", "かさ"],
+    answer: "ふく",
+    grades: [5, 6],
+  },
+  {
+    question: "「政治」の「政」の読みは？",
+    choices: ["せい", "じ", "おさ", "くに"],
+    answer: "せい",
+    grades: [5, 6],
+  },
+  {
+    question: "「構造」の「構」の読みは？",
+    choices: ["こう", "ぞう", "つく", "かた"],
+    answer: "こう",
+    grades: [5, 6],
+  },
+  {
+    question: "「批判」の「批」の読みは？",
+    choices: ["ひ", "はん", "いけん", "こうぎ"],
+    answer: "ひ",
+    grades: [5, 6],
+  },
+  // ── 6年生 ──
+  {
+    question: "「憲法」の「憲」の読みは？",
+    choices: ["けん", "ぽう", "きまり", "こく"],
+    answer: "けん",
+    grades: [6],
+  },
+  {
+    question: "「就職」の「就」の読みは？",
+    choices: ["しゅう", "しょく", "はたら", "つく"],
+    answer: "しゅう",
+    grades: [6],
+  },
+  {
+    question: "「縮小」の「縮」の読みは？",
+    choices: ["しゅく", "しょう", "ちぢ", "へ"],
+    answer: "しゅく",
+    grades: [6],
+  },
+  {
+    question: "「推薦」の「推」の読みは？",
+    choices: ["すい", "せん", "おし", "すす"],
+    answer: "すい",
+    grades: [6],
+  },
+  {
+    question: "「暖かい」の「暖」の読みは？",
+    choices: ["あたた", "さむ", "つめ", "ぬく"],
+    answer: "あたた",
+    grades: [6],
+  },
+  {
+    question: "「俳句」の「俳」の読みは？",
+    choices: ["はい", "く", "しょう", "うた"],
+    answer: "はい",
+    grades: [6],
+  },
+  {
+    question: "「模倣」の「模」の読みは？",
+    choices: ["も", "ほう", "まね", "にせ"],
+    answer: "も",
+    grades: [6],
+  },
+  {
+    question: "「裁判」の「裁」の読みは？",
+    choices: ["さい", "はん", "たつ", "きめ"],
+    answer: "さい",
+    grades: [6],
+  },
+  {
+    question: "「尊重」の「尊」の読みは？",
+    choices: ["そん", "じゅう", "たっと", "うやま"],
+    answer: "そん",
+    grades: [6],
+  },
+  {
+    question: "「討論」の「討」の読みは？",
+    choices: ["とう", "ろん", "はな", "ぎろん"],
+    answer: "とう",
+    grades: [6],
   },
 ];
 
@@ -129,8 +477,9 @@ function startQuiz() {
     return;
   }
 
+  const MAX_QUESTIONS = 10;
   state.selectedGrade = selectedGrade;
-  state.questions = shuffle(filteredQuestions);
+  state.questions = shuffle(filteredQuestions).slice(0, MAX_QUESTIONS);
   state.current = 0;
   state.score = 0;
   showStartMessage("");

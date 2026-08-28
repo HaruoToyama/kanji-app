@@ -191,9 +191,9 @@ const QUESTIONS = [
     grades: [3, 4, 5, 6],
   },
   {
-    question: "「昨日」の「昨」の読みは？",
-    choices: ["きのう（さく）", "きょう", "あした", "あさ"],
-    answer: "きのう（さく）",
+    question: "「昨日」は何と読む？",
+    choices: ["きのう", "きょう", "あした", "あさって"],
+    answer: "きのう",
     grades: [3, 4, 5, 6],
   },
   {
@@ -374,9 +374,9 @@ const QUESTIONS = [
     grades: [6],
   },
   {
-    question: "「暖簾」の「暖」の読みは？",
-    choices: ["だん", "のれん", "あたた", "ぬく"],
-    answer: "だん",
+    question: "「暖かい」の「暖」の読みは？",
+    choices: ["あたた", "さむ", "つめ", "ぬく"],
+    answer: "あたた",
     grades: [6],
   },
   {

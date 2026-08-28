@@ -101,8 +101,8 @@ const QUESTIONS = [
   },
   {
     question: "「時間」の「間」の読みは？",
-    choices: ["あいだ", "まえ", "うち", "そと"],
-    answer: "あいだ",
+    choices: ["かん", "まえ", "うち", "そと"],
+    answer: "かん",
     grades: [2, 3],
   },
   {
@@ -156,8 +156,8 @@ const QUESTIONS = [
   },
   {
     question: "「使う」の「使」の読みは？",
-    choices: ["つかう", "もちいる", "おくる", "はこぶ"],
-    answer: "つかう",
+    choices: ["つか", "もち", "おく", "はこ"],
+    answer: "つか",
     grades: [3, 4, 5, 6],
   },
   {

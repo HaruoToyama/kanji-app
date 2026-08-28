@@ -17,41 +17,49 @@ const QUESTIONS = [
     question: "「山」は何と読む？",
     choices: ["かわ", "やま", "そら", "もり"],
     answer: "やま",
+    grades: [1, 2],
   },
   {
     question: "「火」は何と読む？",
     choices: ["みず", "かぜ", "ひ", "つち"],
     answer: "ひ",
+    grades: [1, 2],
   },
   {
     question: "「木」は何と読む？",
     choices: ["き", "いし", "はな", "くさ"],
     answer: "き",
+    grades: [1, 2],
   },
   {
     question: "「学校」の「校」の読みは？",
     choices: ["こう", "きょう", "だい", "しゅう"],
     answer: "こう",
+    grades: [2, 3, 4, 5, 6],
   },
   {
     question: "「先生」の「先」の読みは？",
     choices: ["あと", "よこ", "さき", "した"],
     answer: "さき",
+    grades: [1, 2, 3],
   },
   {
     question: "「日曜日」の「曜」の読みは？",
     choices: ["にち", "よう", "び", "まい"],
     answer: "よう",
+    grades: [2, 3, 4, 5, 6],
   },
   {
     question: "「電気」の「電」の読みは？",
     choices: ["でん", "き", "かぜ", "ひかり"],
     answer: "でん",
+    grades: [2, 3, 4, 5, 6],
   },
   {
     question: "「友達」の「友」の読みは？",
     choices: ["とも", "はは", "ちち", "こ"],
     answer: "とも",
+    grades: [1, 2, 3],
   },
 ];
 
@@ -63,6 +71,7 @@ const state = {
   current: 0,      // 現在の問題インデックス
   score: 0,        // 正解数
   answered: false, // 現在の問題に回答済みか
+  selectedGrade: null, // 選択中の学年
 };
 
 // ─────────────────────────────────────────────
@@ -88,14 +97,43 @@ function showScreen(id) {
   document.getElementById(id).classList.remove("hidden");
 }
 
+function getQuestionsByGrade(grade) {
+  return QUESTIONS.filter((q) => Array.isArray(q.grades) && q.grades.includes(grade));
+}
+
 // ─────────────────────────────────────────────
 // クイズ表示
 // ─────────────────────────────────────────────
 
+function showStartMessage(message) {
+  const messageEl = document.getElementById("start-message");
+  if (!message) {
+    messageEl.textContent = "";
+    messageEl.classList.add("hidden");
+    return;
+  }
+  messageEl.textContent = message;
+  messageEl.classList.remove("hidden");
+}
+
 function startQuiz() {
-  state.questions = shuffle(QUESTIONS);
+  const selectedGrade = Number(document.getElementById("grade-select").value);
+  if (!selectedGrade) {
+    showStartMessage("がくねんを えらんでから はじめよう！");
+    return;
+  }
+
+  const filteredQuestions = getQuestionsByGrade(selectedGrade);
+  if (filteredQuestions.length === 0) {
+    showStartMessage("このがくねんの もんだいは じゅんびちゅうだよ。");
+    return;
+  }
+
+  state.selectedGrade = selectedGrade;
+  state.questions = shuffle(filteredQuestions);
   state.current = 0;
   state.score = 0;
+  showStartMessage("");
   showScreen("screen-quiz");
   renderQuestion();
 }

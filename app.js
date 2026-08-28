@@ -13,6 +13,7 @@
 // 増やす場合はこの配列に追加するだけでOK
 // ─────────────────────────────────────────────
 const QUESTIONS = [
+  // 1・2年生向け
   {
     question: "「山」は何と読む？",
     choices: ["かわ", "やま", "そら", "もり"],
@@ -32,16 +33,95 @@ const QUESTIONS = [
     grades: [1, 2],
   },
   {
-    question: "「学校」の「校」の読みは？",
-    choices: ["こう", "きょう", "だい", "しゅう"],
-    answer: "こう",
-    grades: [2, 3, 4, 5, 6],
+    question: "「水」は何と読む？",
+    choices: ["ひ", "かぜ", "みず", "そら"],
+    answer: "みず",
+    grades: [1, 2],
   },
+  {
+    question: "「月」は何と読む？",
+    choices: ["ほし", "つき", "ひ", "かぜ"],
+    answer: "つき",
+    grades: [1, 2],
+  },
+  {
+    question: "「川」は何と読む？",
+    choices: ["やま", "うみ", "かわ", "いけ"],
+    answer: "かわ",
+    grades: [1, 2],
+  },
+  {
+    question: "「日」は何と読む？",
+    choices: ["つき", "ひ", "ほし", "はな"],
+    answer: "ひ",
+    grades: [1, 2],
+  },
+  {
+    question: "「犬」は何と読む？",
+    choices: ["ねこ", "とり", "いぬ", "うま"],
+    answer: "いぬ",
+    grades: [1, 2],
+  },
+  {
+    question: "「花」は何と読む？",
+    choices: ["くさ", "き", "はな", "は"],
+    answer: "はな",
+    grades: [1, 2],
+  },
+  {
+    question: "「雨」は何と読む？",
+    choices: ["かぜ", "ゆき", "あめ", "くも"],
+    answer: "あめ",
+    grades: [1, 2],
+  },
+  // 2・3年生向け
   {
     question: "「先生」の「先」の読みは？",
     choices: ["あと", "よこ", "さき", "した"],
     answer: "さき",
     grades: [1, 2, 3],
+  },
+  {
+    question: "「友達」の「友」の読みは？",
+    choices: ["とも", "はは", "ちち", "こ"],
+    answer: "とも",
+    grades: [1, 2, 3],
+  },
+  {
+    question: "「空」は何と読む？",
+    choices: ["うみ", "そら", "やま", "かわ"],
+    answer: "そら",
+    grades: [1, 2, 3],
+  },
+  {
+    question: "「気持ち」の「気」の読みは？",
+    choices: ["き", "けい", "ちから", "こころ"],
+    answer: "き",
+    grades: [1, 2, 3],
+  },
+  {
+    question: "「時間」の「間」の読みは？",
+    choices: ["かん", "まえ", "うち", "そと"],
+    answer: "かん",
+    grades: [2, 3],
+  },
+  {
+    question: "「兄弟」の「兄」の読みは？",
+    choices: ["あに", "おとうと", "いもうと", "ちち"],
+    answer: "あに",
+    grades: [2, 3],
+  },
+  {
+    question: "「家族」の「族」の読みは？",
+    choices: ["ぞく", "かぞく", "か", "そく"],
+    answer: "ぞく",
+    grades: [3, 4],
+  },
+  {
+    question: "「学校」の「校」の読みは？",
+    choices: ["こう", "きょう", "だい", "しゅう"],
+    answer: "こう",
+    grades: [2, 3, 4, 5, 6],
   },
   {
     question: "「日曜日」の「曜」の読みは？",
@@ -55,11 +135,110 @@ const QUESTIONS = [
     answer: "でん",
     grades: [2, 3, 4, 5, 6],
   },
+  // 3〜6年生向け
   {
-    question: "「友達」の「友」の読みは？",
-    choices: ["とも", "はは", "ちち", "こ"],
-    answer: "とも",
-    grades: [1, 2, 3],
+    question: "「都市」の「都」の読みは？",
+    choices: ["と", "まち", "し", "けん"],
+    answer: "と",
+    grades: [3, 4, 5, 6],
+  },
+  {
+    question: "「地図」の「図」の読みは？",
+    choices: ["ず", "え", "か", "がら"],
+    answer: "ず",
+    grades: [3, 4, 5, 6],
+  },
+  {
+    question: "「音楽」の「楽」の読みは？",
+    choices: ["らく", "がく", "おと", "ね"],
+    answer: "がく",
+    grades: [2, 3, 4, 5, 6],
+  },
+  {
+    question: "「使う」の「使」の読みは？",
+    choices: ["つか", "もち", "おく", "はこ"],
+    answer: "つか",
+    grades: [3, 4, 5, 6],
+  },
+  {
+    question: "「植物」の「植」の読みは？",
+    choices: ["うえ", "しょく", "は", "み"],
+    answer: "しょく",
+    grades: [3, 4, 5, 6],
+  },
+  {
+    question: "「世界」の「界」の読みは？",
+    choices: ["さかい", "かい", "せか", "せ"],
+    answer: "かい",
+    grades: [3, 4, 5, 6],
+  },
+  // 4〜6年生向け
+  {
+    question: "「勉強」の「勉」の読みは？",
+    choices: ["べん", "きょう", "まな", "ちから"],
+    answer: "べん",
+    grades: [4, 5, 6],
+  },
+  {
+    question: "「科学」の「科」の読みは？",
+    choices: ["か", "かがく", "がく", "き"],
+    answer: "か",
+    grades: [4, 5, 6],
+  },
+  {
+    question: "「説明」の「説」の読みは？",
+    choices: ["せつ", "めい", "はなし", "こと"],
+    answer: "せつ",
+    grades: [4, 5, 6],
+  },
+  {
+    question: "「試験」の「験」の読みは？",
+    choices: ["けん", "ため", "し", "ひ"],
+    answer: "けん",
+    grades: [4, 5, 6],
+  },
+  {
+    question: "「観察」の「察」の読みは？",
+    choices: ["さつ", "かん", "み", "さ"],
+    answer: "さつ",
+    grades: [4, 5, 6],
+  },
+  // 5・6年生向け
+  {
+    question: "「経験」の「経」の読みは？",
+    choices: ["けい", "へ", "ふ", "とお"],
+    answer: "けい",
+    grades: [5, 6],
+  },
+  {
+    question: "「環境」の「境」の読みは？",
+    choices: ["きょう", "さかい", "ところ", "けい"],
+    answer: "きょう",
+    grades: [5, 6],
+  },
+  {
+    question: "「責任」の「責」の読みは？",
+    choices: ["せき", "にん", "せ", "め"],
+    answer: "せき",
+    grades: [5, 6],
+  },
+  {
+    question: "「複雑」の「複」の読みは？",
+    choices: ["ふく", "ざつ", "はば", "かえ"],
+    answer: "ふく",
+    grades: [5, 6],
+  },
+  {
+    question: "「評価」の「評」の読みは？",
+    choices: ["ひょう", "か", "あたい", "ほめ"],
+    answer: "ひょう",
+    grades: [5, 6],
+  },
+  {
+    question: "「独立」の「独」の読みは？",
+    choices: ["どく", "ひとり", "りつ", "たつ"],
+    answer: "どく",
+    grades: [5, 6],
   },
 ];
 
@@ -130,7 +309,7 @@ function startQuiz() {
   }
 
   state.selectedGrade = selectedGrade;
-  state.questions = shuffle(filteredQuestions);
+  state.questions = shuffle(filteredQuestions).slice(0, 10);
   state.current = 0;
   state.score = 0;
   showStartMessage("");
